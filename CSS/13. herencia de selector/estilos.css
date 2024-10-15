@@ -1,0 +1,19 @@
+body {
+    color: brown;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div {
+    width: 50%;
+}
+
+h1 /* El h1 es un elemento que esta dentro del body por lo tanto hereda el color de este hasta que se aplique un color diferente */ {
+    color: blue;
+    width: inherit; /* NOTE La propiedad inherit se utiliza para heredar el valor de la propiedad de su padre */
+}  
+
+p {
+    color: initial; /* NOTE La propiedad initial se utiliza para reiniciar el valor de la propiedad a su valor por defecto */
+    text-align: center;
+    text-shadow: unset; /* NOTE La propiedad unset se utiliza para reiniciar el valor de la propiedad a su valor por defecto, tambien esta el revert que es similar pero se utiliza para reiniciar el valor de la propiedad a su valor heredado */
+}

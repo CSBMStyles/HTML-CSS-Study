@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Bar</title>
+    <link rel="stylesheet" href="estilos.css"> <!-- Enlace a archivo CSS externo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+    <body>
+        <!-- <span class="material-symbols-outlined">cancel</span> --> <!-- Esta es la forma de usar iconos, existen nombres con espacios, para ello es encesario usar la barra baja (_) -->
+         <aside class="sidebar">
+            <form class="sidebar_form">
+                <input type="checkbox" id="open-menu">
+                <label class="material-symbols-outlined" for="open-menu">close</label>
+                <label class="material-symbols-outlined open-button
+                " for="open-menu">menu</label>
+            </form>
+            <picture class="sidebar_picture">
+                <source srcset="../../logo-modificado-2.png" media="(max-width: 768px)">
+                <img src="../../logo-original-2.png" alt="Logo de la pagina CSX">
+            </picture>
+            <nav class="sidebar_nav">
+                <ul>
+                    <li class="sidebar_item">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <a href="#">Notifications</a>
+                    </li>
+                    <li class="sidebar_item">
+                        <span class="material-symbols-outlined">mail</span>
+                        <a href="#">Messages</a>
+                    </li>
+                    <li class="sidebar_item">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                        <a href="#">Shopping Cart</a>
+                    </li>
+                    <li class="sidebar_item">
+                        <span class="material-symbols-outlined">account_balance</span>
+                        <a href="#">Account Balance</a>
+                    </li>
+                    <li class="sidebar_item">
+                        <span class="material-symbols-outlined">settings</span>
+                        <a href="#">Settings</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar_profile">
+                <ul>
+                    <li class="sidebar_item sidebar_profile-container">
+                        <img src="../../profile.png" alt="Foto de perfil">
+                        <span class="sidebar_profile-option">Perfil</span>
+                    </li>
+                    <li class="sidebar_item">
+                        <span class="material-symbols-outlined">logout</span>
+                        <a href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+         </aside>
+    </body>
+</html>

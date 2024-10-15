@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: gray;
+    padding: 20px;
+    --color-principal: #48e;
+}
+
+
+.box {
+    --color-principal: rgb(170, 157, 235);
+    background-color: var(--color-principal);
+    display: grid;
+    place-content: center;
+    color: white;
+    margin: 120px auto;
+    font-size: 20px; /* NOTE Hay que tener en cuenta que la propiedad font-size, el <p> tiene de valor predeterminado 1em, por lo que si se le asigna un valor de 20px, en cambio el <h1> tiene un valor predeterminado de 2em, por lo que si se le asigna un valor de 20px, el tamaño de la fuente será diferente */
+    padding: 0 40px;
+    font-size: clamp(2rem, 5vw, 3rem); /* NOTE La función clamp() también se puede usar para ajustar el tamaño de la fuente */
+}
+
+.box:nth-child(2) {
+    color: var(--color-principal);
+    background-color: white;
+}
+
+h1 {
+    font-size: 2.4em;
+    margin-bottom: 0;
+}
+
+body > p {
+    color: var(--color-principal-custom);
+}
+
+/* NOTE El @property se usa para definir una variable personalizada en CSS */
+@property --color-principal-custom {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: white;
+}

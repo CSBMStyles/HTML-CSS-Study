@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+div {
+    background-color: antiquewhite;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-left: 5px solid red;
+    font-size: 14px;
+    height: 70vh;
+    width: 70vw;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-top: 15vh;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+span {
+    color: slategrey;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+p {
+    color: green;
+    font-size: 1em; /* Cuando hablamo de em se refiere al tamaño de la fuente del elemento padre, ahora con el rem se refiere al tamaño de la fuente del elemento raiz en este caso html */
+}
+
+/* Las medidas absolutas son fijas y no cambian como el px, pt, cm, in, mm, pc, las relativas son las que se adaptan al tamaño de la pantalla como el porcentaje, em, rem, vw, vh, vmin, vmax */
+
+/* Existen las medidas fisicas utilizados en el mundo real como el cm, mm, in, pt, pc, las medidas digitales que son las que se utilizan en la web como el px, em, rem, vw, vh, vmin, vmax */

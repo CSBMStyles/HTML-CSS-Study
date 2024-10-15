@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contenedor {
+    container-type: inline-size; /* NOTE Esta propiedad es para definir el tamaño de un contenedor y el valor de inline-size es para definir el ancho */
+    container-name: main; /* NOTE Esta propiedad es para definir el nombre del contenedor por el cual se va a hacer referencia */
+}
+
+p {
+    font-size: 8px;
+}
+
+@container main (max-width: 600px) {
+    p {
+        font-size: 16px;
+    }
+
+}
+
+/* REVIEW La razon de realizar esto es para que los elemntos que estan dentro que estan en el contenedor entonces se les aplique un cambio dependiendo de la resolución */

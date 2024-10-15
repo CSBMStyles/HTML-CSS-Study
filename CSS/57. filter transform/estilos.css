@@ -1,0 +1,30 @@
+body {
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: gray;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    background-color: black;
+    margin: auto;
+    padding: 20px 50px;
+
+}
+
+img {
+    transform: scale(1.1); /* NOTE Esta propiedad en el transform escala la imagen al 110%, el escalado se puede realizar a x, y o ambos ejes */
+    transform: skew(20deg); /* NOTE La propiedad skew() inclina la imagen en un ángulo determinado */
+}
+
+.box:nth-child(2) img {
+    transform: rotate(45deg); /* NOTE La propiedad rotate() rota la imagen en un ángulo determinado */
+    transform: translateY(50px); /* NOTE La propiedad translateY() traslada la imagen en el eje y */
+}

@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@supports (display: grid) {
+    body {
+        display: grid;
+    }
+}
+
+@supports not (display: grid) { /* NOTE Esta es una feature query que se activa cuando el navegador no soporta la propiedad display: grid */
+    body {
+        display: flex;
+    }
+}

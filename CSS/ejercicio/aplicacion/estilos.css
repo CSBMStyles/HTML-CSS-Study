@@ -1,0 +1,48 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+.card {
+    background-color: blueviolet;
+    text-align: center;
+    width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 0 20px rebeccapurple;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.card-image {
+    width: 80%;
+    border-radius: 20px;
+    margin: 20px;
+    margin-bottom: 0px;
+}
+
+
+.card-title {
+    margin-bottom: 0px;
+}
+
+.card-description {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin-top: 0px;
+}
+
+.card-content {
+    font-size: 14px;
+    padding: 20px;
+    background-color: aquamarine;
+    text-align: justify;
+}
+
+.red-card {
+    background-color: red;
+}
+
+.green-card {
+    background-color: green;
+}

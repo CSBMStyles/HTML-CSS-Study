@@ -1,0 +1,76 @@
+:root {
+    --color-primario: #ff0000;
+    --color-secundario: #00ff00;
+}
+
+h1 {
+    color: blue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+}
+
+h1:hover /* NOTE En este caso se esta haciendo referencia a los elementos que esten siendo seleccionados por el mouse */ {
+    color: black;
+}
+
+h1:active /* NOTE En este caso se esta haciendo referencia a los elementos que esten siendo seleccionados por el mouse y que esten siendo presionados */ {
+    color: red;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+/* Seleccion de pseudo clases */
+
+li:first-child /* NOTE En este caso se esta haciendo referencia al primer hijo de un elemento */ {
+    color: red;
+}
+
+li:last-child /* NOTE En este caso se esta haciendo referencia al ultimo hijo de un elemento */ {
+    color: green;
+}
+
+li:nth-child(2) /* NOTE En este caso se esta haciendo referencia al segundo hijo de un elemento */ {
+    color: blue;
+}
+
+li:nth-of-type(2) /* NOTE Cuando se usa nth-child si existe una elemento diferente al li este no se va a tomar en cuenta, en cambio con nth-of-type se toma en cuenta el tipo de elemento */ {
+    color: blue;
+}
+
+li:nth-child(4n) /* NOTE En este caso se esta haciendo referencia a los elementos que sean multiplos de 3 */ {
+    color: purple;
+    background-color: yellow;
+}
+
+.list li:not(.excluido) /* NOTE En este caso se esta haciendo referencia a los elementos que no tengan la clase excluido */ {
+    color: orange;
+}
+
+div:empty /* NOTE En este caso se esta haciendo referencia a los elementos que esten vacios */ {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+a:link /* NOTE En este caso se esta haciendo referencia a los elementos que esten en estado de link */ {
+    color: var(--color-primario);
+}
+
+a:visited /* NOTE En este caso se esta haciendo referencia a los elementos que esten en estado de visitado */ {
+    color: var(--color-secundario);
+}
+
+body input:default /* NOTE En este caso se esta haciendo referencia a los elementos que esten en estado de default */ {
+    border: 2px solid blue;
+}
+
+input:focus /* NOTE En este caso se esta haciendo referencia a los elementos que esten en estado de focus */ {
+    border: 2px solid black;
+}
+
+input:valid /* NOTE En este caso se esta haciendo referencia a los elementos que esten en estado de validos */ {
+    border: 2px solid green;
+}
+
+input:invalid /* NOTE En este caso se esta haciendo referencia a los elementos que esten en estado de invalidos */ {
+    border: 2px solid red;
+}

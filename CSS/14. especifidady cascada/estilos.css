@@ -1,0 +1,35 @@
+h1 {
+    color: blue;
+}
+
+h1 {
+    color: red; /* NOTE En este caso el h1 tiene un nivel es especificidad que cuando se para sobre el elemento se ve que tiene 0, 0, 1, en el caso de que exista igual nivel de especificidad se toma el que este mas abajo en el codigo */
+}
+
+.second-title {
+    color: green; /* NOTE En este caso el si nos paramos en el elemento se ve que tiene 0, 1, 0, en este caso el nivel de espevificidad es diferente al h2 que tiene 0, 0, 1, por lo que se toma el que tenga el nivel mas alto */
+}
+
+h2 {
+    color: yellow;
+}
+
+.third-title {
+    color: orange;
+}
+
+#third-title {
+    color: purple; /* NOTE En este caso el si nos paramos en el elemento se ve que tiene 1, 0, 0, en este caso el nivel de espevificidad es diferente al de la clase que tiene 0, 1, 0, por lo que se toma el que tenga el nivel mas alto */
+}
+
+#fourth-title {
+    color: pink;
+}
+
+body #fourth-title {
+    color: black; /* NOTE En este caso se tiene que revisar el nivel de especificidad para conocer el mas importante, para facil interpretacion se puede quetar las comas para que sea mas facil de leer el mayor nivel de especificidad */
+}
+
+/* En el nivel de especificidad exite un nivel que el absoluto que es !important que se le puede dar a un estilo para que este tenga prioridad sobre los demas estilos */
+
+/* REVIEW Entonces se que el nivel de especificidad de mayou a menor va desde los id, clases, elementos, pseudo clases y pseudo elementos */

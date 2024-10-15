@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f1f1;
+}
+
+.modal, dialog {
+    position: absolute;
+    background-color: #000a;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 10px 20px;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+}
+
+.modal-title {
+    margin-top: 10px;
+}
+
+.modal-close-button {
+    background-color: #000;
+    color: white;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    padding: 5px 10px;
+    border-radius: 4px;
+}

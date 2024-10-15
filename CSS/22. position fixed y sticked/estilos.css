@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contenedor {
+    padding: 150px;
+    background-color: blue;
+    position: relative;
+}
+
+h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+p {
+    font-size: 14px;
+    margin: 0;
+
+}
+
+.box {
+    width: 200px;
+    height: 60px;
+    position: fixed; /* NOTE Esta es una propiedad que se parece al absolute, pero a el no le importa si al elemeto padre se le ha asignado una propiedad de posicion relative para se posicione en base a el, entonces se posiciona en base a la ventana del navegador, ademas tenemos que el elemento no se mueve cuando se hace scroll en la pagina */
+    right: 0;
+    background-color: white;
+    border: 2px solid black;
+    border-right: 0;
+    box-shadow: 0 0 4px black;
+}
+
+.box-fixed {
+    height: 60px;
+    width: 200px;
+    background-color: red;
+    position: sticky; /* NOTE Esta propiedad es similar a la fixed, pero a diferencia de esta, el elemento se mueve cuando se hace scroll en la pagina, pero cuando llega a la parte superior de la pagina, se queda fijo en esa posicion */
+    top: 20px;
+}

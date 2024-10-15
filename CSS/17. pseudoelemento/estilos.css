@@ -1,0 +1,34 @@
+div {
+    padding: 20px;
+}
+
+h1::first-letter /* NOTE Esto es un pseudoelemento, se esta haciendo referencia a la primera letra del elemento h1 */ {
+    color: red;
+    font-size: 2em;
+}
+
+div::first-line /* NOTE Esto es un pseudoelemento, se esta haciendo referencia a la primera linea del elemento div */ {
+    color: blue;
+    font-size: 1.5em;
+}
+
+h1::selection /* NOTE Esto es un pseudoelemento, se esta haciendo referencia a la seleccion del elemento h1 */ {
+    color: white;
+    background-color: black;
+}
+
+input::placeholder /* NOTE Esto es un pseudoelemento, se esta haciendo referencia al placeholder del elemento input */ {
+    color: red;
+}
+
+li::marker /* NOTE Esto es un pseudoelemento, se esta haciendo referencia al marcador del elemento li */ {
+    color: blue;
+}
+
+li::before /* NOTE Esto es un pseudoelemento, se esta haciendo referencia al contenido antes del elemento li, cuando se inspecciona no se encuentra en el inspector */ {
+    content: "👉";
+}
+
+li::after /* NOTE Esto es un pseudoelemento, se esta haciendo referencia al contenido despues del elemento li, cuando se inspecciona no se encuentra en el inspector */ {
+    content: "👈";
+}

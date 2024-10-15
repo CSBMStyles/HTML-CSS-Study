@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+    height: 200px;
+    object-fit: cover; /* NOTE Esta propiedad nos permite hacer que la imagen se ajuste al tamaño del elemento, en este caso, cuando la imagen sea mas grande que el elemento, esta se va a ajustar al tamaño del elemento, existen otros valores como "contain" que hace que la imagen se ajuste al tamaño del elemento, en este caso, cuando la imagen sea mas pequeña que el elemento, esta se va a ajustar al tamaño del elemento, "fill" que hace que la imagen se ajuste al tamaño del elemento, en este caso, cuando la imagen sea mas pequeña que el elemento, esta se va a ajustar al tamaño del elemento, "none" que hace que la imagen no se ajuste al tamaño del elemento, en este caso, cuando la imagen sea mas grande que el elemento, esta se va a desbordar del elemento, "scale-down" que hace que la imagen se ajuste al tamaño del elemento, en este caso, cuando la imagen sea mas grande que el elemento, esta se va a ajustar al tamaño del elemento, cuando la imagen sea mas pequeña que el elemento, esta se va a ajustar al tamaño de la imagen */
+    border: 2px solid black;
+    margin-top: 50px;
+}

@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+}
+
+.box {
+    width: 120px;
+    height: 120px;
+    background-color: red;
+    margin-top: 50px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 4px;
+    /* REVIEW La razon por la que se ponen las propiedades de transition en el elemento padre, es porque si se ponen en el elemento hijo, la transicion no se va a ver solo cuando se esta en este caso con el mouse sobre el elemento pero cuando cuando se vuelva a quitar el mouse del elemento, la transicion no se va a ver */
+    transition-property: background-color, color, transform, margin-top; /* NOTE Esta propiedad nos permite hacer una transicion de los cambios que se le hagan al elemento, en este caso, cuando el mouse este sobre el elemento, este se va a reflejar el cambio en el color de fondo y el color del texto, se puede usar el valor "all", pero no es buena practica */
+    transition-duration: 0.5s; /* NOTE Esta propiedad nos permite hacer una transicion de los cambios que se le hagan al elemento, en este caso, cuando el mouse este sobre el elemento, este se va a reflejar el cambio en 0.5 segundos */
+    transition-delay: 0.5s;
+}
+
+.box:hover {
+    background-color: blue;
+    color: white;
+    margin-top: 40px;/* NOTE Se debe tener cuidado con las propiedades como margin o padding que usan como valor padre el auto, a diferencia del margin-top que tiene un numero la transición no va a tener problemas */
+     transform: scale(1.1); /* NOTE Esta propiedad nos permite hacer una transicion de escala en el elemento, en este caso, cuando el mouse este sobre el elemento, este se va a escalar 1.1 veces su tamaño original */
+}
+
+.box-two {
+    width: 120px;
+    height: 120px;
+    background-color: red;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 4px;
+    /* NOTE La propiedad tansition se pueden poner los valores property, duration, timing-function y delay en una sola linea, separados por comas */
+    transition-property: left;
+    transition-duration: 0.5s; 
+    transition-timing-function: ease-in-out; /* NOTE Esta propiedad es para controlar la aceleracion de la transicion, en este caso, cuando el mouse este sobre el elemento, exiten diferenctes valores que se pueden usar, como "ease", que hace que la transicion sea mas lenta al principio y mas rapida al final, "ease-in", que hace que la transicion sea mas lenta al principio y mas rapida al final, "ease-out", que hace que la transicion sea mas rapida al principio y mas lenta al final, "ease-in-out", que hace que la transicion sea mas lenta al principio y mas lenta al final, "linear", que hace que la transicion sea constante, "cubic-bezier(n,n,n,n)", que hace que la transicion sea personalizada, se puede usar la pagina "cubic-bezier.com" para hacer una transicion personalizada */
+    position: relative;
+    left: 0;
+}
+
+body:hover .box-two {
+    left: 500px;
+}

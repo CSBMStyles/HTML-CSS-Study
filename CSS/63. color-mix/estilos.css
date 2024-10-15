@@ -1,0 +1,31 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.box {
+    font-size: 30px;
+    padding: 320px;
+    width: fit-content;
+    background-color: color-mix(in srgb, #f44 30%, #48e 30%); /* NOTE El color-mix es una propiedad que permite la mezcla de dos colores, el valor que inicia es el srgb, para trabajar con colores en rgb, el segundo valor es el color que se va a mezclar, el tercer valor es el porcentaje de la la intensidad del color */
+}
+
+/* NOTE Lo siguiente es el proceso necesario para tratar de replicar esta propiedad */
+.box-2 {
+    background-color: #f447;
+}
+
+.box-2 > p {
+    background-color: #49e6;
+    font-size: 30px;
+    padding: 320px;
+    
+}

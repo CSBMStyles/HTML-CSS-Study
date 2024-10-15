@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 200px 200px 200px; /*NOTE Esta propidad define la cantidad y tamaño de columnas que vamos a tener en nuestro grid para la cantidad de elementos disponibles*/
+    grid-template-rows: 100px 200px; /*NOTE Esta propiedad define el tamaño de filas que vamos a tener en nuestro grid para la cantidad de elementos disponibles*/
+    /*REVIEW El grid-template-columns puede mirarse como definir el width de los elementos y el grid-template-rows como definir el height de los elementos*/
+}
+
+.grid-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 200px) minmax(200px, 400px); /*NOTE Esta propiedad repeat es para repetir el tamaño de las columnas o filas*/
+    /*NOTE La propiedad minmax nos permite definir un tamaño minimo y maximo para las columnas o filas*/
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr auto 2fr; /*NOTE Esta propiedad nos permite que los elementos se ajusten al tamaño del contenedor*/
+}
+
+.grid-item {
+    background-color: aqua;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+}

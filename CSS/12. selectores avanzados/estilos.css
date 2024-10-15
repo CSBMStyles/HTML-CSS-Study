@@ -1,0 +1,57 @@
+li {
+    color: red;
+}
+h1 {
+    color: blue;
+    font-size: 24px;
+}
+span {
+    color: green;
+}
+.ingrediente-faltante { /* Esto es un una clase para referenciar a un elemento entonces a diferencia de las demas utiliza un punto en el inicio */
+    color: purple; 
+}
+#ingrediente-secreto { /* Esto es un id para referenciar a un elemento entonces a diferencia de las demas utiliza un numeral en el inicio */
+    color: orange;
+}
+
+/* Selector por artibuto */
+
+img[src="https://png.pngtree.com/background/20230519/original/pngtree-young-woman-anime-cartoon-drawing-picture-image_2660945.jpg"] /* NOTE En los selectores cuando se utiliza los corchetes se esta haciendo referencia a un atributo de un elemento en este caso se esta haciendo referencia a la imagen que tenga el atributo src con el valor que se le esta dando */ {
+    width: 200px;
+}
+
+img[src="https://png.pngtree.com/background/20230611/original/pngtree-an-anime-girl-of-dark-hair-and-long-black-hair-picture-image_3155069.jpg"] {
+    width: 400px;
+}
+
+img[src$=png] /* NOTE En este caso se esta haciendo referencia a las imagenes que tengan el atributo png para eso se usa el $ para referirce a que termina con el valor que se le esta dando */ { 
+    border: 2px solid black;
+}
+
+img[src^="https://www.recetasnestle"] /* NOTE En este caso se esta haciendo referencia a las imagenes que tengan el atributo png para eso se usa el ^ para referirce a que empieza con el valor que se le esta dando */ {
+    border: 2px solid red;
+}
+
+/* Selector por hijo o nietos */
+
+ul span /* NOTE Le estamos dando estilo a los li que esten dentro de un ul puede ser hijo o nieto */ {
+    text-shadow: 0 0 5px black;
+}
+
+ul > li /* NOTE Le estamos dando estilo a los li que sean hijos directos de un ul */ {
+    border: 2px solid green;
+}
+
+/* Selecor por hermanos */
+h1 + p /* NOTE En este caso se esta haciendo referencia a los elementos que sean hermanos directos que le sigue de un h1 */ {
+    color: blue;
+}
+
+h1 ~ p /* NOTE En este caso se esta haciendo referencia a los elementos que sean hermanos general de un h1 */ {
+    color: blue;
+}
+
+h1 + p + ul > .ingrediente-faltante /* NOTE En este caso se esta haciendo referencia a los elementos que sean hermanos directos que le sigue de un h1 y que sean hijos directos de un ul y que tengan la clase ingrediente-faltante */ {
+    letter-spacing: 2px;
+}

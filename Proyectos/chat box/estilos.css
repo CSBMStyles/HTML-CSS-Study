@@ -1,0 +1,78 @@
+:root {
+    --color-text: #080213;
+    --color-background: #e6eeff;
+    --color-box: #d1b3ff;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-background);
+}
+
+.chat {
+    max-width: clamp(300px, 80%, 900px);
+    background-color: var(--color-box);
+    margin: 50px auto;
+    border-radius: 20px;
+}
+
+.chat_user {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--color-text);
+}
+
+.chat_user img {
+    max-width: 2.6rem;
+    margin: 10px;
+}
+
+.chat_content {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.msg {
+    background-color: var(--color-background);
+    font-size: .6rem;
+    padding: 6px;
+    border-radius: 8px 8px 8px 0;
+    position: relative;
+    z-index: 10;
+    max-width: clamp(300px, 60%, 600px);
+    margin: 6px;
+    width: fit-content;
+}
+
+.msg::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    background-color: var(--color-background);
+    bottom: -18px;
+    left: -8px;
+    clip-path: polygon(50% 0%, 0% 50%, 100% 0);
+    z-index: 5;
+}
+
+.self {
+    background-color: var(--color-background);
+    filter: saturate(4);
+    margin-left: auto; /* NOTE Esto es para que el mensaje pase a la derecha */
+    border-radius: 8px 8px 0 8px;
+}
+
+.self::before {
+    clip-path: polygon(0 0, 100% 50%, 50% 0);
+    bottom: -16px;
+    left: auto;
+    right: -6px;
+}

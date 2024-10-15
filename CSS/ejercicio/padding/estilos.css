@@ -1,0 +1,31 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(255, 255, 255);
+    display: flex; /* Sirve para cuando se recorte las dimensiones no se vena afectados los elementos */
+    flex-direction: column; /* Con esto se alinea los elementos de manera vertical */
+
+}
+
+.card {
+    background-color: blueviolet;
+    text-align: center;
+    width: 600px;
+    margin: auto;
+}
+
+h1 {
+    padding-top: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+p {
+    font-size: 14px;
+    padding: 20px;
+    background-color: aquamarine;
+    text-align: justify;
+}

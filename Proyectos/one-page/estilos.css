@@ -1,0 +1,63 @@
+:root {
+    --color-text: #080213;
+    --color-background: #e6eeff;
+    --color-box: #d1b3ff;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-background);
+    height: 200dvh;
+}
+
+header {
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    filter: grayscale();
+    mix-blend-mode: screen; /* NOTE Esta propiedad es para que la imagen se vea mejor en el fondo */
+    position: fixed;
+    top: 0;
+    animation: aparecer both;
+    animation-timeline: scroll();
+    max-height: 100dvh;
+}
+
+.text-container {
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    font-size: clamp(1.5rem, 5vw, 10rem);
+    color: var(--color-text);
+    mix-blend-mode: darken;
+    font-weight: 600;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 2vw;
+}
+
+.left-text {
+    color: #48e;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

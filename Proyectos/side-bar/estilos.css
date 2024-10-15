@@ -1,0 +1,239 @@
+:root {
+    --color-text: #080213;
+    --color-background: #e6eeff;
+    --color-sidebar: #d1b3ff;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-background);
+}
+
+/* Sidebar styles */
+
+label .sidebar_nav {
+    user-select: none;
+}
+
+.sidebar {
+    background-color: var(--color-sidebar);
+    position: fixed;
+    height: 100dvh;
+    width: clamp(200px, 20vw, 300px);
+    font-size: clamp(1rem, 2.2vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 0 30px 6px;
+}
+
+/* Sidebar picture styles */
+
+.sidebar_picture {
+    margin-left: 1.5rem;
+    position: relative;
+    z-index: 10;
+}
+
+.sidebar_picture img {
+    width: clamp(8rem, 90%, 12rem);
+    margin: auto;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.sidebar label {
+    position: relative;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: .4rem;
+}
+
+.sidebar label::before, .sidebar label::after {
+    content: '';
+    background-color: var(--color-background);
+    position: absolute;
+    width: 10px;
+    height: 25px;
+    background-color: transparent;
+}
+
+.sidebar label::before {
+    top: -25px;
+    left: 19px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 4px 4px 0 4px var(--color-background);
+}
+
+.sidebar label::after {
+    bottom: -25px;
+    left: 19px;
+    border-top-right-radius: 25px;
+    box-shadow: 4px -4px 0 4px var(--color-background);
+}
+
+input[type="checkbox"]:checked ~ label {
+    color: var(--color-background);
+    background-color: var(--color-sidebar);
+}
+
+input[type="checkbox"]:checked ~ label::before, 
+input[type="checkbox"]:checked ~ label::after {
+    display: none;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) {
+    width: fit-content;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) .sidebar_form .open-button {
+    display: block;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) .sidebar_form label {
+    display: none;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) .sidebar_picture img {
+    display: none;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) picture {
+    width: fit-content;
+    margin-left: .75rem;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) :is(.sidebar_item a, .sidebar_profile-option) {
+    display: none;
+}
+
+.sidebar_form {
+    position: absolute;
+    z-index: 20;
+    right: -1rem;
+}
+
+.sidebar_form .open-button {
+    display: none;
+}
+
+.sidebar_nav {
+    flex: 1;
+    display: flex;
+}
+
+.sidebar_nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.sidebar_item {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-size: .8rem;
+    padding-right: 6px;
+    color: var(--color-text);
+    border-radius: 30px 0 0 30px;
+    position: relative;
+}
+
+.sidebar_item:hover {
+    background-color: var(--color-background);
+}
+
+.sidebar_item:hover::before, .sidebar_item:hover:after {
+    content: '';
+    background-color: var(--color-background);
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    width: 18px;
+    height: 18px;
+
+}
+
+.sidebar_item:hover:before {
+    top: -10px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 4px 4px 0 4px var(--color-background);
+}
+
+.sidebar_item:hover:after {
+    bottom: -10px;
+    border-top-right-radius: 25px;
+    box-shadow: 4px -4px 0 4px var(--color-background);
+}
+
+.sidebar_nav span {
+    padding: 12px;
+    font-size: 1.5rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Sidebar profile syles */
+
+.sidebar_profile {
+    flex: 1;
+    display: flex;
+}
+
+.sidebar_profile ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.sidebar_profile span {
+    padding: 12px;
+    font-size: 1.5rem;
+}
+
+.sidebar_profile img {
+    border-radius: 50%;
+    width: 3rem;
+}
+
+.sidebar_profile-container {
+    margin: 12px;
+    padding: 0;
+}
+
+.sidebar_profile-container:hover {
+    width: fit-content; /* NOTE La razon de aplicar witdh fit-content es para que el contenedor se ajuste al contenido */
+    border-radius: 25px;
+}
+
+.sidebar_profile-container::before, .sidebar_profile-container::after {
+    display: none;
+}
+
+.sidebar_profile li {
+    display: flex;
+    align-items: center;
+    color: var(--color-text);
+}
+
+.sidebar_profile-option {
+    font-size: 1.5rem;
+    padding: 0 12px 0 8px;
+    color: inherit;
+}
+

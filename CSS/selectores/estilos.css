@@ -1,0 +1,16 @@
+li {
+    color: red;
+}
+h1 {
+    color: blue;
+    font-size: 24px;
+}
+span {
+    color: green;
+}
+.ingrediente-faltante { /* Esto es un una clase para referenciar a un elemento entonces a diferencia de las demas utiliza un punto en el inicio */
+    color: purple; 
+}
+#ingrediente-secreto { /* Esto es un id para referenciar a un elemento entonces a diferencia de las demas utiliza un numeral en el inicio */
+    color: orange;
+}

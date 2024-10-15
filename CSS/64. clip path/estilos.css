@@ -1,0 +1,17 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+}
+
+
+img {
+    max-width: 100%;
+    clip-path: circle(30%); /* NOTE Esta propiedad es la que se encarga de recortar la imagen cuando usarmos el at el primir valor puede verse como el porcentaje de de posicion en el eje x y el segundo valor como el porcentaje de posicion en el eje y */
+    /* REVIEW Se recominda usar un generador de clip-path para poder ver como se comporta la imagen */
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Element Modified</title>
+    <link rel="stylesheet" href="estilos.css"> <!-- Enlace a archivo CSS externo -->
+</head>
+<body>
+    <h1>Ingredientes</h1>
+    <ul class="list"> <!-- NOTE En esta metodologia todo se ve como un bloque, entonces los elementos dentro del bloque tiene el mismo nombre de clase padre -->
+        <li class="list__item item--important">Leche</li> <!-- NOTE Se le agrega un modificador a la clase padre estos se ponen con dos guiones y el nombre del modificador -->
+        <li class="list__item item--danger">Huevos</li>
+        <li class="list__item">Harina</li>
+        <li class="list__item">Azúcar</li>
+    </ul>
+    <ul class="list list--vieja">
+        <li class="list__item item--important">Leche</li>
+        <li class="list__item item--danger">Huevos</li>
+        <li class="list__item">Harina</li>
+        <li class="list__item">Azúcar</li>
+    </ul>
+    <ul class="list"> 
+        <li class="list__item item--important">Leche</li>
+        <li class="list__item item--danger">Huevos</li>
+        <li class="list__item">Harina</li>
+        <li class="list__item">Azúcar</li>
+    </ul>
+</body>
+</html>

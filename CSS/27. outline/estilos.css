@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    background-color: gray;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    margin: auto;
+    margin-top: 50px;
+    border: 5px solid black;
+    outline-width: 50px;
+    outline-color: white;
+    outline-style: solid;
+    outline-offset: 10px; /* NOTE Esta propiedad nos permite hacer que el borde se separe del elemento */
+}
+
+input {
+    border: 2px solid black;
+}
+
+input:focus {
+    outline: 2px solid black; /* NOTE Esta propiedad nos permite hacer que el elemento tenga un borde de color negro cuando se enfoque, el primer valor es el width, el segundo valor es el estilo, y el ultimo es el color, funciona igual al border, pero la diferencia radica en que el outline no ocupa espacio */
+}
+
+input:focus-visible {
+    outline: none; /* En caso de querer quitar el outline esta es la manera correcta en cuanto a accesibilidad */
+}

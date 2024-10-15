@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    background-color: azure;
+    color: aliceblue;
+}
+
+/* Header section */
+
+.header {
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-image: url(https://live.staticflickr.com/1157/1351088279_3aa5116a08_b.jpg);
+    display: flex;
+    background-size: cover;
+}
+
+.header-overlay {
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    z-index: 1;
+}
+
+.header-item--container {
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    text-align: center;
+    max-width: 700px;
+}
+
+.header-img {
+    min-width: 200px;
+    max-width: 60%;
+    border-radius: 5px;
+    border: 6px solid rgb(181, 140, 35);
+    margin: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3rem;
+    text-wrap: balance;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+/* Nav section */
+
+.nav {
+    background-color: rgb(181, 140, 35);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 4px 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.nav-ul {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    position: sticky;
+    top: 0;
+} 
+
+.nav-item {
+    list-style: none;
+}
+
+.nav-logo-container, .nav-ul-container {
+    flex-grow: 1;
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: border-radius 0.5s, background-color 0.5s, color 0.5s, outline 0.5s, outline-offset 0.5s;
+    outline: 0;
+    outline-offset: 0;
+}
+
+.nav-link:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(181, 140, 35);
+    border-radius: 5px;
+    outline: 2px solid rgb(181, 140, 35);
+    outline-offset: 2px;
+}
+
+.link--login {
+    background-color: rgb(90, 65, 65);
+    color: rgb(181, 140, 35);
+    border-radius: 5px;
+    padding: auto 24px;
+    margin-left: 20px;
+}
+
+.link--login:hover {
+    outline: none;
+}
+
+.nav-logo {
+    justify-content: center;
+    width: 30px;
+}
+
+
+/* Main section */
+
+main {
+    max-width: 1000px;
+    margin:  auto;
+    text-wrap: pretty;
+}
+
+main p {
+    color: black;
+}

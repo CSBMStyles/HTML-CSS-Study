@@ -1,0 +1,50 @@
+<html>
+<head>
+  <style>
+    .container {
+      display: flex;
+      width: 100%;
+      height: 200px;
+      border: 1px solid #ccc;
+      justify-content: space-between;
+      gap: 10px 30px;
+    }
+
+    .item {
+      padding: 10px;
+      background-color: #f1f1f1;
+      border: 1px solid #ddd;
+    }
+
+    .item-1 {
+      flex-grow: 1;
+      flex-basis: 100px;
+    }
+
+    .item-2 {
+      flex-grow: 2;
+      flex-basis: 50px;
+    }
+
+    .item-3 {
+      flex-grow: 0;
+      flex-basis: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Ejemplo sin usar flex-grow y flex-basis</h2>
+  <div class="container">
+    <div class="item">Elemento 1</div>
+    <div class="item">Elemento 2</div>
+    <div class="item">Elemento 3</div>
+  </div>
+
+  <h2>Ejemplo usando flex-grow y flex-basis</h2>
+  <div class="container">
+    <div class="item item-1">Elemento 1</div>
+    <div class="item item-2">Elemento 2</div>
+    <div class="item item-3">Elemento 3</div>
+  </div>
+</body>
+</html>

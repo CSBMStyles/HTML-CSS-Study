@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div, body {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    max-width: 100%;
+    aspect-ratio: 16/9; /* NOTE Esta propiedad es para mantener la relación de aspecto, en videos, pero comprobando se puede ver que de igual forma se puede usar la de imagen */
+}
+
+video {
+    max-width: 100%;
+}

@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div, body {
+    box-sizing: border-box;
+}
+
+.flebox {
+    display: flex;
+}
+
+.flex-item {
+    background-color: blue;
+    padding: 30px;
+    border: 2px solid black;
+    flex-grow: 1;
+}
+
+@media screen and (min-width: 768px) { /* NOTE Esta es una media query que se activa cuando el ancho de la pantalla es de 768px o más, existen otras funciones de media diferente a screen, como print, que se activa cuando se imprime la página, o speech, que se activa cuando se lee la página en voz alta, y otras más */
+    .flebox {
+        flex-direction: row;
+    }
+}

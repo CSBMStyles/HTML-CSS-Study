@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- Es el metadato que indica el tipo de codificación de caracteres que se está utilizando en el documento. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Es el metadato que indica al navegador que el sitio web es responsive. -->
+    <title>Unidades Medidas</title>
+    <link rel="icon" href="https://cdn.icon-icons.com/icons2/1508/PNG/512/mpvicon8bit64x64_104611.png" type="image/png"> <!-- Icono de la pestaña -->
+    <link rel="stylesheet" href="estilos.css"> <!-- Enlace a archivo CSS externo -->
+</head>
+<body>
+    <form>
+        <h1>Formulario de contacto</h1>
+        <div class="form-input"> <!-- Los labels tienen un atributo for que se relaciona con el id del input, para que al dar clic en el label se seleccione el input -->
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" placeholder="Cristian Stiven Barrera">
+        </div>
+        <div class="form-input">
+            <label>Email</label>
+            <input type="email" placeholder="cristian@gmail.com">
+        </div>
+        <div class="form-input">
+            <label>Mensaje</label> 
+            <textarea id="autoresizing" placeholder="Escribe tu mensaje"></textarea> <!-- Antes del placeholder se puede colocar la atributo readonly para que el textarea no sea editable.
+            Igualmente existe el disable: que es para que el textarea no sea editable y no se pueda seleccionar texto
+            Existe un limite de caracteres con el atributo maxlength, también limitar el numero de columnas y filas con cols y rows respectivamente. -->
+        </div>
+    </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const textarea = document.getElementById('autoresizing');
+            textarea.addEventListener('input', autoResize, false);
+        
+            function autoResize() {
+                this.style.height = 'auto';
+                this.style.height = this.scrollHeight + 'px';
+            }
+        });
+        </script>
+</body>
+</html>

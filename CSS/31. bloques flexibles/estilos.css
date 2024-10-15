@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div, body {
+    box-sizing: border-box;
+}
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 500px;
+    margin: auto;
+}
+
+.bloque {
+    display: inline-block;
+    min-width: 200px;
+    /* max-width: 300px; */
+    min-height: auto; /* NOTE Esto es interesante porque en caso de que el texto sobrepase el tamaño de la altura entonces como no definimos un tamaño fijo, el bloque crecerá en altura hasta que se defina un max-height */
+    background-color: rgb(190, 148, 229);
+    margin: auto;
+    width: 100%;
+    flex-grow: 1;
+    flex-basis: 0;
+    font-size: 12px;
+    padding: 10px;
+    margin: 10px;
+}

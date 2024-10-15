@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100dvh; /* REVIEW El dvh es una unidad de medida que se usa para que el tamaño de la pantalla sea el 100% del viewport a diferencia del vh que toma en cuenta la barra de navegación entonces es importante usarlo para que no se vea afectado por la barra de navegación */
+}
+
+
+.box {
+    font-size: 30px;
+    padding: 0 40px;
+}
+
+/* NOTE Para que en el primer párrafo se vea la primera letra más grande, es necesario usar pseudo-elementos, el primer valor es el tamaño de la letra y el segundo el espacio entre la letra y el texto */
+p::first-letter {
+    initial-letter: 2 2;
+    padding: 10px;
+    padding-bottom: 0;
+    color: red;
+
+}

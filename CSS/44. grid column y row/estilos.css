@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, div {
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* NOTE El valor auto-fit nos permite ajustar el número de columnas al tamaño del contenedor, tambien existe el auto-fill que ajusta el tamaño de las columnas al tamaño del contenido pero no al contenedor */
+    grid-auto-flow: row; /* NOTE La propiedad grid-auto-flow nos permite definir la dirección en la que se colocarán los elementos que no tienen un área definida */
+    grid-auto-rows: 1fr; /* NOTE La propiedad grid-auto-rows nos permite definir un tamaño para las filas que no tienen un tamaño definido */
+    grid-auto-columns: 100px; /* NOTE La propiedad grid-auto-columns nos permite definir un tamaño para las columnas que no tienen un tamaño definido */
+    margin: auto;
+    padding: 10px;
+    gap: 20px; /* NOTE La propiedad gap nos permite definir el espacio entre las filas y columnas */
+    
+}
+
+.grid-item {
+    background-color: aqua;
+    font-size: 30px;
+    max-width: 100%;
+}
+
+.grid-item:first-child {
+    grid-column-start: 1; /* NOTE La propiedad grid-column-start nos permite definir en que columna empezará el elemento */
+    grid-row-start: 1; /* NOTE La propiedad grid-row-start nos permite definir en que fila empezará el elemento */
+    grid-column-end: 3;
+    grid-row-end: 3;    
+    /* NOTE Para no tener problemas al definir el tamaño de un elemento en el end, es necesario hacerlo en los dos, tanto en column como en row en imagenes, no con los div */ 
+    grid-column: 1/span 2; /* NOTE La propiedad span nos permite definir cuantas columnas o filas ocupará el elemento */
+    grid-row: 1/span 2;
+}
+
+.grid-item:hover {
+    opacity: 0.7;
+}
+

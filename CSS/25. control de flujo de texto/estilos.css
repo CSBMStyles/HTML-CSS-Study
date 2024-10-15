@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ccc;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: white;
+    border: 1px solid black;
+    /*white-space: nowrap;*/ /* NOTE Esta propiedad nos permite hacer que el texto no se desborde del elemento, en este caso, cuando el texto sea muy largo, este se va a mostrar en una sola linea */
+    /*white-space: pre;*/ /* NOTE Esta propiedad hace que realice los saltos de lineas segun se escriban en el texto, pero no respeta que se desborde el texto en el recuadro */
+    /*white-space: pre-wrap;*/ /* NOTE Esta propiedad hace que realice los saltos de lineas segun se escriban en el texto, pero este respeta que se desborde el texto en el recuadro */
+
+    white-space: normal; /* NOTE Esta propiedad nos permite hacer que el texto no se desborde del elemento, en este caso, cuando el texto sea muy largo, este se va a mostrar en una sola linea */
+    text-overflow: ellipsis; /* NOTE Esta propiedad nos permite hacer que el texto que se desborde del elemento, este se muestre con puntos suspensivos al final */
+    overflow: hidden; /* NOTE Esta propiedad nos permite hacer que el contenido que se desborde del elemento, este se oculte */
+    text-wrap: pretty; /* NOTE Esta propiedad nos permite hacer que el texto se ajuste al tamaño del elemento, en este caso, cuando el texto sea muy largo, este se va a ajustar al tamaño del elemento */
+}
+
+h1 {
+    text-wrap: balance; /* NOTE Esta propiedad nos permite hacer que el texto se ajuste al tamaño del elemento, en este caso, cuando el texto sea muy largo, este se va a ajustar al tamaño del elemento */
+}

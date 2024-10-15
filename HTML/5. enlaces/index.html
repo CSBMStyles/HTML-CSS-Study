@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- Es el metadato que indica el tipo de codificación de caracteres que se está utilizando en el documento. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Es el metadato que indica al navegador que el sitio web es responsive. -->
+    <title>Fillset, Legends</title>
+    <link rel="icon" href="https://cdn.icon-icons.com/icons2/1508/PNG/512/mpvicon8bit64x64_104611.png" type="image/png"> <!-- Icono de la pestaña -->
+    <link rel="stylesheet" href="estilos.css"> <!-- Enlace a archivo CSS externo -->
+</head>
+<body>
+    <form>
+        <h1>Formulario de contacto</h1>
+
+        <!-- Inputs simples -->
+        <fieldset> <!-- El fieldset es un contenedor que agrupa elementos de formulario y los separa visualmente. -->
+        <legend>Información personal</legend>
+            <div class="form-input"> <!-- Los labels tienen un atributo for que se relaciona con el id del input, para que al dar clic en el label se seleccione el input -->
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" placeholder="Cristian Stiven Barrera">
+            </div>
+            <div class="form-input">
+                <label>Email</label>
+                <input type="email" placeholder="cristian@gmail.com">
+            </div>
+        </fieldset>
+
+        <!-- Select y options -->
+
+        <div class="form-input">
+            <label for="type-request">Tipo de mensaje</label>
+            <select name="type-request" id="type-request"> <!-- El select tiene un atributo name que es el nombre del select, para que al enviar el formulario se envie el nombre del select y el valor seleccionado -->
+                <option value="option-1">Peticiones</option>
+                <option value="option-2">Queja</option>
+                <option value="option-3">Reclamo</option>
+            </select>
+        </div>
+
+        <!-- Datalist y options -->
+
+        <div class="form-input">
+            <label for="referent">Referentes</label>
+            <input list="referent"> <!-- El input tiene un atributo list que se relaciona con el id del datalist, para que al escribir en el input se muestren las opciones del datalist -->
+            <datalist name="referente" id="referent"> <!-- El select tiene un atributo name que es el nombre del select, para que al enviar el formulario se envie el nombre del select y el valor seleccionado -->
+                <option value="Amigo">Descripción</option>
+                <option value="Web">Aparece en las busquedas</option>
+                <option value="Red Social"></option>
+            </datalist>
+        </div>
+
+        <!-- Text area -->
+
+        <div class="form-input">
+            <label>Mensaje</label> 
+            <textarea id="autoresizing" placeholder="Escribe tu mensaje"></textarea> <!-- Antes del placeholder se puede colocar la atributo readonly para que el textarea no sea editable.
+            Igualmente existe el disable: que es para que el textarea no sea editable y no se pueda seleccionar texto
+            Existe un limite de caracteres con el atributo maxlength, también limitar el numero de columnas y filas con cols y rows respectivamente. -->
+        </div>
+        <div class="terms-content">
+            <label for="terms">Acepto <a href="terms.html">terminos y condiciones</a></label>
+            <input id="terms" type="checkbox" class="checkbox-terms">
+        </div>
+    </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const textarea = document.getElementById('autoresizing');
+            textarea.addEventListener('input', autoResize, false);
+        
+            function autoResize() {
+                this.style.height = 'auto';
+                this.style.height = this.scrollHeight + 'px';
+            }
+        });
+        </script>
+</body>
+</html>

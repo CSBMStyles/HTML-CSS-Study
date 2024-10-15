@@ -1,0 +1,62 @@
+body {
+    background-color: rgb(75, 74, 74);
+    display: flex;
+}
+
+* {
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin: auto;
+    filter: drop-shadow(0px 0px 15px #fff),
+            drop-shadow(0px 0px 5px #fff);
+}
+
+.text {
+    color: white;
+    letter-spacing: 4px;
+    animation: grow 2s both steps(5);
+    overflow: hidden;
+    position: relative;
+}
+
+.text::selection {
+    background-color: transparent;
+}
+
+.text::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: white;
+    right: 0;
+    border-radius: 50%;
+    animation: titilar 1s infinite alternate;
+}
+
+@keyframes grow {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes titilar {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

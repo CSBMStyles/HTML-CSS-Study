@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div {
+    padding: 10px;
+    background-color: #999;
+
+}
+
+.links {
+    background-color: red;
+    color: white;
+    display: block; /* NOTE Esta propiedad hace que el elemento se comporte como un bloque, es decir, que ocupe todo el ancho disponible, entonces empieza una nueva linea */
+    margin: 20px; /* NOTE En el display bloc se acepta la propiedad margin */
+    padding: 20px; /* NOTE En el display bloc se acepta la propiedad padding */
+
+    /* La razon por la que lo acepta es a que el display block hace que el elemento se comporte como un bloque, entonces se puede aplicar las propiedades de bloque, de por defecto el a es una etiquta de tipo linea, osea que en display tiene la propiedad inline */
+}
+
+.nav {
+    background-color: blue;
+}
+
+.nav-list {
+    margin: 0;
+    text-align: center;
+}
+
+.nav-item {
+    display: inline-block; /* NOTE Esta propiedad hace que el elemento se comporte como una linea, es decir, que no ocupe todo el ancho disponible, entonces no empieza una nueva linea */
+    border-radius: 2px;
+}
+
+.nav-links:hover {
+    background-color: rgb(111, 163, 241);
+}
+
+.nav-links {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+.link--button:hover {
+    background: transparent;
+    color: #fff;
+}
+
+.link--button {
+    padding: 6px 12px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: #48e;
+    border-radius: 2px;
+    margin-left: 12px;
+    /* display: none;*/ /* NOTE Esta propiedad hace que el elemento no se muestre en la pagina o directamente no existe */
+}

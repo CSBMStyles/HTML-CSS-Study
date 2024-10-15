@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+}
+
+.box {
+    background-color: #000;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.box-default {
+    box-sizing: border-box; /* Con esto se hace que el padding y el borde no afecten el tamaño de la caja, en caso de que nos se haga entonces toca calcular para ajustar los elementos si se añade border o padding */
+    padding: 30px;
+}
+
+.box-new {
+    box-sizing: border-box;
+    padding: 30px;
+}

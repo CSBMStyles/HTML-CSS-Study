@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srcest y Sizes</title>
+    <link rel="stylesheet" href="estilos.css"> <!-- Enlace a archivo CSS externo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <picture>
+            <source srcset="asus-original.jpg" media="(min-width: 800px)" type="image/webp"> <!-- Si la pantalla es mayor a 800px, se muestra la imagen del teléfono, en caso de no definir la media entonces el navegados ubicara la que convenga, se puede definir el tipo tambien de la imagen -->
+            <img src="asus-telefono.jpg" alt="Laptop">
+        </picture>
+    </body>
+</html>

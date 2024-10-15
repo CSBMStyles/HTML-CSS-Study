@@ -1,0 +1,56 @@
+body {
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: gray;
+    
+}
+
+.crecedor {
+    height: 200vh;
+}
+
+.container {
+    scroll-timeline: --containerScroll;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.box {
+    background-color: white;
+    border: 4px solid #48e;
+    padding: 6px;
+    border-radius: 40px;
+    position: fixed;
+    width: 100%;
+}
+
+.barra {
+    padding: 40px;
+    background-color: #48e;
+    border-radius: 30px;
+    width: 0%;
+    animation-name: llenar-barra;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-timeline: --containerScroll; /* NOTE Se puede definir una animación para que se ejecute cuando el elemento se muestre en la pantalla, en este ejemplo se puede usar el scroll del body con scroll() */
+}
+
+.barra:active {
+    animation-play-state: paused; /* NOTE Se puede pausar la animación con paused y reanudarla con running */
+}
+
+/* NOTE La estructura de una animación es la siguiente */
+@keyframes llenar-barra {
+    from { /* NOTE Se define el estado inicial de la animación con from o 0% */
+        width: 0%;
+        background-color: red;
+    }
+
+
+    to {   /* NOTE Se define el estado final de la animación con to o 100% */
+        width: 100%;
+    }
+}

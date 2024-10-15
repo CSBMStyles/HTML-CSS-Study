@@ -1,0 +1,31 @@
+body {
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: gray;
+    height: 50vh;
+    display: flex;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    background-color: black;
+    margin: auto;
+    padding: 20px 50px;
+    filter: drop-shadow(0 0 10px white); /* NOTE Se puede aplicar un filtro mediante funciones, en este caso le aplicamos un sombreado */
+    filter: blur(5px); /* NOTE El filtro blur() aplica un desenfoque al elemento */
+    filter: brightness(0.5); /* NOTE El filtro brightness() ajusta el brillo del elemento, en este caso se reduce a la mitad */
+    filter: contrast(200%); /* NOTE El filtro contrast() ajusta el contraste del elemento, en este caso se aumenta al doble */
+    filter: grayscale(100%); /* NOTE El filtro grayscale() convierte el elemento a escala de grises */
+    filter: hue-rotate(90deg); /* NOTE El filtro hue-rotate() rota el tono del elemento, en este caso 90 grados */
+    filter: invert(100%); /* NOTE El filtro invert() invierte los colores del elemento */
+    filter: opacity(50%); /* NOTE El filtro opacity() ajusta la opacidad del elemento, en este caso se reduce a la mitad */
+    filter: saturate(200%); /* NOTE El filtro saturate() ajusta la saturación del elemento, en este caso se aumenta al doble */
+    filter: sepia(100%); /* NOTE El filtro sepia() convierte el elemento a sepia */
+    filter: none; /* NOTE Se puede eliminar un filtro con none */
+    backdrop-filter: blur(10px); /* NOTE El filtro backdrop-filter() aplica un desenfoque al fondo del elemento, entonces los mejor es usarlo en elementos con fondo transparente */
+    filter: sepia(100%) blur(10px) contrast(200%); /* NOTE Se pueden aplicar varios filtros a la vez */
+}

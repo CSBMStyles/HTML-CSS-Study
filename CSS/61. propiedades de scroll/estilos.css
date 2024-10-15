@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.box {
+    font-size: 30px;
+    padding: 0 40px;
+    border: 4px solid black;
+    width: 50vw;
+    height: 100vh;
+    overflow: scroll;
+    scroll-behavior: smooth; /* NOTE La propiedad scroll-behavior: smooth; permite que el scroll sea suave */
+    scrollbar-color: #48e rgb(126, 170, 236); /* NOTE Se puede cambiar el color de la barra de scroll con scrollbar-color */
+    scrollbar-width: thin; /* NOTE Se puede cambiar el ancho de la barra de scroll con scrollbar-width, donde el thin es el ancho más delgado, medium es el ancho medio y thick es el ancho más grueso, el auto es el ancho por defecto */
+}
+
+.crecer {
+    height: 200vh;
+}

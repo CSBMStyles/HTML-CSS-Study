@@ -1,0 +1,50 @@
+body {
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: gray;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.box {
+    margin: 20px;
+    background-color: white;
+    border: 4px solid #48e;
+    padding: 6px;
+    border-radius: 40px;
+    
+}
+
+
+
+.barra {
+    padding: 40px;
+    background-color: #48e;
+    border-radius: 30px;
+    width: 0%;
+    animation-name: llenar-barra; /* NOTE Para usar las animaciones es encesario usar en el elemento el nombre de la animación definida */
+    animation-duration: 3s; /* NOTE Igualmente a las transiciones, se puede definir la duración de la animación */
+    animation-delay: 3s; /* NOTE Se puede definir un retraso para que la animación comience, interesantemente se puede poner en negativo para que la animación comience antes de que el elemento se muestre */
+    animation-fill-mode: both; /* NOTE Se puede definir el estado inicial de la animación, de tal manera que cuando se usa el backwars, la animación se detiene en el estado inicial, el forward en el estado final y el both en ambos estados */
+    animation-timing-function: linear; /* NOTE Se puede definir la función de tiempo de la animación, como ease, ease-in, ease-out, ease-in-out, linear, step-start, step-end, steps, cubic-bezier */
+    animation-iteration-count: infinite; /* NOTE Se puede definir el número de veces que se repite la animación, se puede usar un número o infinite, el delay solo funciona para la primera vez que se repite la animación */
+    animation-direction: alternate; /* NOTE Se puede definir la dirección de la animación, normal que es para seguir el orden de la animación, reverse para invertir el orden de la animación y alternate para que se repita en ambos sentidos */
+}
+
+.barra:active {
+    animation-play-state: paused; /* NOTE Se puede pausar la animación con paused y reanudarla con running */
+}
+
+/* NOTE La estructura de una animación es la siguiente */
+@keyframes llenar-barra {
+    from { /* NOTE Se define el estado inicial de la animación con from o 0% */
+        width: 0%;
+        background-color: red;
+    }
+
+
+    to {   /* NOTE Se define el estado final de la animación con to o 100% */
+        width: 100%;
+    }
+}

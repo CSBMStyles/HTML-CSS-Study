@@ -1,0 +1,62 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    background-color: rgb(232, 138, 138);
+    border-radius: 10px;
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 20px 2px black; /* Se puede especificar el desplazamiento horizontal, vertical, el desenfoque y el tamaño de la sombra */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: auto; /* Para que el contenido no se salga de la caja */
+    text-align: center;
+}
+
+/* Estiliza la barra de desplazamiento */
+.box::-webkit-scrollbar {
+    width: 8px; /* Hace la barra de desplazamiento menos ancha */
+}
+
+/* Estiliza el riel de la barra de desplazamiento */
+.box::-webkit-scrollbar-track {
+    background: #ff0000; /* Color de fondo del riel, intenta que coincida con el fondo del contenedor */
+    border-radius: 10px; /* Borde redondeado para el riel */
+}
+
+/* Estiliza el pulgar de la barra de desplazamiento */
+.box::-webkit-scrollbar-thumb {
+    background: #ff5e5e; /* Color del pulgar de la barra de desplazamiento */
+    border-radius: 10px; /* Borde redondeado para el pulgar */
+}
+
+/* Estiliza el pulgar de la barra de desplazamiento al pasar el mouse */
+.box::-webkit-scrollbar-thumb:hover {
+    background: #847070; /* Color del pulgar al pasar el mouse */
+}
+
+.box h1 {
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.box p {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    list-style: none;
+    line-height: 1.5;
+    font-size: 14px;
+    text-shadow: 0 0 4px black; /* Agrega sombra al texto */
+}
+
+img {
+    width: 50%;
+    filter: drop-shadow(0 0 5px black); /* Agrega sombra a las letras de una imagen especificamente a las imagenes que son png que tienen fondo transparente */
+}

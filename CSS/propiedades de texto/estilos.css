@@ -1,0 +1,36 @@
+/* Es buena practica terminar en ; */
+p {
+    color: red; /* Es una propiedad para cambiar el color del texto */
+    font-family: Outfit-Personalizado; /* Sirve para cambiar la fuente del texto, se puede poner varias fuentes en caso de que una no este disponible */
+    font-size: 1rem; /* Sirve para cambiar el tamaño del texto, se puede poner en px, em, rem, %, etc */
+    font-weight: 800; /* Sirve para cambiar el grosor del texto, se puede poner en 100, 200, 300, 400, 500, 600, 700, 800, 900 */
+    font-style: normal; /* Es para cambiar la forma del texto, se puede poner en normal, italic, oblique */
+    text-align: justify; /* Es para alinear el texto, se puede poner en left, right, center, justify */
+    text-decoration: underline; /* Es para poner una linea en un texto, hay de diferentes tipos como underline, overline, line-through, none */
+    line-height: 1.5; /* Es para cambiar la altura entre lineas de un texto, se puede poner en px, em, rem, %, etc */
+    letter-spacing: 2px; /* Sirve para cambiar el espacio entre letras, se puede poner en px, em, rem, %, etc */
+    text-transform: none; /* Es para cambiar a mayurcular o minusculas un texto, se puede poner en uppercase, lowercase, capitalize, none */
+    text-shadow: none; /* Sirve para poner una sombra a un texto, se puede poner en px, em, rem, %, etc */
+    word-break: break-all; /* Sirve para romper una palabra en un texto de tal manera que cuando se recorte dimensiones entonces se ajuste, se puede poner en break-all, break-word, keep-all */
+    word-wrap: break-word; /* Sirve para romper una palabra en un texto de tal manera que cuando se recorte dimensiones entonces se ajuste, se puede poner en break-word, normal */
+}
+
+h1 {
+    color: blue;
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+}
+a {
+    color: green;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    text-decoration: none;
+}
+

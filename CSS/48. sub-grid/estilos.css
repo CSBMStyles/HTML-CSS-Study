@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, div {
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    padding: 10px;
+    justify-items: stretch; /* NOTE La propiedad justify-items nos permite alinear los elementos en el eje de las columnas, es usado en grid */
+    justify-content: space-evenly; /* NOTE La propiedad justify-content nos permite alinear todas las celdas en el eje de las columnas*/
+    align-items: stretch; /* NOTE La propiedad align-items nos permite alinear los elementos en el eje de las filas*/
+    align-content: space-evenly; /* NOTE La propiedad align-content nos permite alinear todas las celdas en el eje de las filas */
+    border: 2px solid #000;
+    margin: 20px;
+}
+
+.grid-item {
+    background-color: rgb(92, 92, 237);
+    font-size: 30px;
+    max-width: 100%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.grid-item:nth-child(1) {
+    background-color: rgb(45, 236, 220);
+    grid-area: 2/2/span 2/span 2;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    gap: 20px;
+    padding: 0;
+}
+
+.subgrid-item {
+    background-color: rgb(92, 92, 237);
+    width: 180px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+
+}
+
+.grid-item:hover {
+    opacity: 0.5;
+}

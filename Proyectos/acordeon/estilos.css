@@ -1,0 +1,81 @@
+:root {
+    --color-text: #080213;
+    --color-background: #e6eeff;
+    --color-box: #d1b3ff;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-background);
+}
+
+.faq {
+    max-width: clamp(300px, 80%, 900px);
+    margin: auto;
+}
+
+details {
+    background-color: var(--color-box);
+    margin: 8px;
+    padding: 8px;
+    max-height: 36px;
+    transition: max-height 1s;
+    overflow: hidden;
+}
+
+details[open] {
+    max-height: 400px;
+}
+
+details[open] .content {
+    animation: aparecer 1s .3s both;
+}
+
+summary {
+    user-select: none;
+    position: relative;
+}
+
+summary::marker {
+    content: '';
+}
+
+summary::before {
+    content: '+';
+    position: absolute;
+    right: 0;
+    font-weight: 800;
+}
+
+details[open] summary::before {
+    content: '-';
+}
+
+.content {
+    padding: 10px, 20px;
+    margin: 10px;
+    margin-bottom: 0;
+    border-top: 1px solid var(--color-text);
+    font-size: .8rem;
+}
+
+details b {
+    background-color: var(--color-background);
+    padding: 4px;
+    border-radius: 4px;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

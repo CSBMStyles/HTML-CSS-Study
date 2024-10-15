@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificidad y cascada</title>
+    <link rel="stylesheet" href="estilos.css"> <!-- Enlace a archivo CSS externo -->
+</head>
+<body>
+    <h1>Titulo principal</h1>
+    <h2 class="second-title">Titulo dos</h2>
+    <h3 id="third-title" class="third-title">Titulo tres</h3>
+    <h4 id="fourth-title" style="color: blueviolet;">Titulo cuatro</h4> <!-- En este caso como atriburo en el HTML tiene un nivel de especificidad mayour que el de la etiqueta de este mismo HTML -->
+</body>
+<style>
+    #fourth-title {
+        color: red; /* El nivel de especificidad es mayor que lo establecido en el atributo en el CSS */
+    }
+</style>
+</html>

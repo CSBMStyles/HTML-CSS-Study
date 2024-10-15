@@ -1,0 +1,44 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.flexbox {
+    display: flex; /* NOTE Esta propiedad tiene la funcion de hacer que los elementos hijos se comporten como elementos flexibles */
+    flex-direction: row-reverse; /* NOTE Esta propiedad tiene la funcion de cambiar la direccion de los elementos hijos */
+    /* flex-direction: column; /* NOTE Esta propiedad tiene la funcion de cambiar la direccion de los elementos hijos */
+    direction: ltr; /* NOTE Esto es para que el texto se muestre de izquierda a derecha, tambien se puede alrevez con rtl */
+    flex-wrap: wrap-reverse; /* NOTE Esta propiedad tiene la funcion de que los elementos hijos se ajusten al contenedor, la propiedad por defecto es nowrap */
+    flex-flow: row wrap; /* NOTE Esta propiedad es una abreviacion de flex-direction y flex-wrap */
+    justify-content: space-between; /* NOTE Esta propiedad tiene la funcion de alinear los elementos hijos en el contenedor a lo largo del eje principal, existe varias opciones como start que es alinear al inicio, end que es alinear al final, center que es alinear al centro, space-between que es alinear con espacio entre los elementos, space-around que es alinear con espacio alrededor de los elementoo y space-evenly que es alinear con espacio igual entre los elementos */
+    align-items: center; /* NOTE Esta propiedad tiene la funcion de alinear los elementos hijos en el contenedor a lo largo del eje secundario, el valor por defecto es stretch que es estirar los elementos para que ocupen todo el espacio, tambien se puede usar start que es alinear al inicio, end que es alinear al final, center que es alinear al centro y baseline que es alinear a la base segun el texto */
+    align-content: space-evenly; /* NOTE Esta propiedad tiene la funcion de alinear las lineas de los elementos hijos en el contenedor a lo largo del eje secundario, el valor por defecto es stretch que es estirar los elementos para que ocupen todo el espacio, tambien se puede usar start que es alinear al inicio, end que es alinear al final, center que es alinear al centro, space-between que es alinear con espacio entre los elementos, space-around que es alinear con espacio alrededor de los elemento y space-evenly que es alinear con espacio igual entre los elementos */
+    /* REVIEW El aling-items se usaria para alinear cuando se tiene una fila, el align-content se usaria para alinear cuando se tiene varias filas */
+    height: 250px;
+    width: 100%;
+    border: 2px solid black;
+    gap: 10px 30px; /* NOTE Esta propiedad tiene la funcion de establecer el espacio entre los elementos hijos, puede verse como un margin */
+}
+
+.flex-item {
+    height: 100px;
+    background-color: red;
+    border-radius: 4px;
+    flex-basis: 100px; /* NOTE Esta propiedad tiene la funcion de establecer el tamaño base de los elementos hijos */
+    
+}
+
+.flex-item:first-child {
+    background-color: pink;
+    order: 0; /* NOTE Esta propiedad tiene la funcion de cambiar el orden de los elementos hijos */
+    flex-grow: 1; /* NOTE Esta propiedad tiene la funcion de hacer que los elementos hijos crezcan en proporcion al espacio disponible, parece que solo sirve para una fila */
+    flex-shrink: 4; /* NOTE Esta propiedad tiene la funcion de hacer que los elementos hijos se encojan en proporcion al espacio disponible, parece que solo sirve para una fila */
+}
+
+.flex-item:last-child {
+    background-color: blue;
+    order: 0; /* NOTE Esta propiedad tiene la funcion de cambiar el orden de los elementos hijos solo a nivel visual */
+}
+
+.item--5 {
+    align-self: start; /* NOTE Esta propiedad tiene la funcion de estirar el elemento hijo para que ocupe todo el espacio disponible */
+}

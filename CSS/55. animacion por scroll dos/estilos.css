@@ -1,0 +1,38 @@
+body {
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: gray;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.crecedor {
+    height: 100vh;
+}
+
+.box {
+    background-color: #48e;
+    padding: 20px;
+    view-timeline: --cajita block;
+    animation: llenar-barra both;
+    animation-timeline: view(); /* NOTE Se puede definir una animación para que se ejecute cuando el elemento se muestre en la pantalla, en este ejemplo se puede usar el scroll del body con scroll() */
+    animation-timeline: --cajita; /* NOTE Es igual a usar el view(), pero la razon de hacer esto es definir que en caso de que se muestre otro elemento, entonces mediante ese nombre se pueda hacer referencia a la animación para este elemento */
+    animation-timing-function: linear;
+    animation-range-start: cover 20%; /* NOTE Se puede definir el rango de la animación, en este caso se ejecutará cuando el % del elemento esté en la pantalla, se puede usar valores negativos para que se ejecute antes de que el elemento esté en la pantalla */
+    animation-range-end: contain 80%; /* NOTE Se puede definir el rango de la animación, en este caso se ejecutará cuando el % del elemento esté en la pantalla */
+    /* NOTE  Aparte del cover se puede usar contain, que es cuando el elemento está completamente en la pantalla, o exit, que es cuando el elemento sale de la pantalla */
+}
+
+@keyframes llenar-barra {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+    
+}

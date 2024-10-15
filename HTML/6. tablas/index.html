@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <!-- NOTE Usamos las tablas no para maquetar datos, es elemental usarlos para su funcion real de datos con su estructura -->
+    <title>Tablas</title>
+</head>
+
+<body>
+    <table>
+        <thead> <!-- Cabecera de la tabla -->
+            <tr>
+                <th>
+                    <!-- NOTE Encabezado de la tabla -->
+                    <!-- NOTE Puede usarse como td, pero no se recomienda, hay que recordar usar las etiquetas que corresponden -->
+                    Nombre
+                </th>
+                <th>
+                    Apellido
+                </th>
+                <th>
+                    Numero
+                </th>
+            </tr>
+        </thead>
+        <tbody> <!-- Cuerpo de la tabla -->
+            <tr> <!-- NOTE Fila -->
+                <td> <!-- NOTE Columna -->
+                    Cristian
+                </td>
+                <td>
+                    Barrera
+                </td>
+                <td>
+                    +57 3142184371
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    William
+                </td>
+                <td>
+                    Coy
+                </td>
+                <td>
+                    +57 3242362314
+                </td>
+            </tr>
+        </tbody>
+        <tfoot> <!-- Pie de la tabla -->
+            <tr>
+                <th>
+                    Total
+                </th>
+                <td colspan="2"> <!-- NOTE La funcion de colspan es unir columnas -->
+                    2
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

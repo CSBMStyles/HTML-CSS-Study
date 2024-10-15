@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, div {
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    grid-auto-flow: row; /* NOTE La propiedad grid-auto-flow nos permite definir la dirección en la que se colocarán los elementos que no tienen un área definida */
+    grid-auto-rows: 100px; /* NOTE La propiedad grid-auto-rows nos permite definir un tamaño para las filas que no tienen un tamaño definido */
+    grid-auto-columns: auto; /* NOTE La propiedad grid-auto-columns nos permite definir un tamaño para las columnas que no tienen un tamaño definido */
+    border: 4px solid #000;
+    gap: 20px; /* NOTE La propiedad gap nos permite definir el espacio entre las filas y columnas */
+    width: 90vh;
+    margin: auto;
+}
+
+.grid-item {
+    background-color: aqua;
+    font-size: 30px;
+}
+

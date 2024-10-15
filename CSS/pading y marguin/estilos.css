@@ -1,0 +1,42 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(255, 255, 255);
+    display: flex; /* Sirve para cuando se recorte las dimensiones no se vena afectados los elementos */
+    flex-direction: column; /* Con esto se alinea los elementos de manera vertical */
+}
+
+.formulario {
+    background-color: red;
+    padding: 20px 50px 0 10px; /* Es este padding la distribucion de las medidas va en elsentido de las manecillas del reloj comenzando desde arriba, cuando existen cuatro, cuando hay dos el primer valor es arriba y abajo y el segundo es derecha y arriba */ 
+}
+
+.formulario-input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 6px;
+    border-radius: 10px;
+    border-color: red;
+}
+
+.formulario-submit {
+    border-radius: 10px;
+    background-color: rgb(248, 135, 159);
+    color: white;
+    padding: 5px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 10px
+}
+
+.caja {
+    background-color: rgb(248, 135, 159);
+    height: 12px;
+    width: 150px;
+    padding: 74;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.caja-grande { /* En este caso el margin se modifica para identificar que se superponen los elementos */
+    margin: 20px;
+}

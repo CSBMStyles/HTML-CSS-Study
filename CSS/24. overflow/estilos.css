@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    background-color: gray;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    margin-top: 50px;
+    color: red;
+    position: relative;
+    left: 0;
+    border: 2px solid black;
+    margin: auto;
+    margin-top: 50px;
+    overflow: auto; /* NOTE Esta propiedad nos permite hacer que el contenido que se desborde del elemento, este se muestre en una barra de desplazamiento automaticamente para la propiedad overflow se puede poner tambien hiden, visible, clip, scroll */
+}

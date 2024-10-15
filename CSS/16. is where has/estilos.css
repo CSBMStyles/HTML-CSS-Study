@@ -1,0 +1,15 @@
+section .elemento1, section .elemento2, section .elemento3 {
+    color: red;
+}
+
+section :is(.elemento1, .elemento2, .elemento3) /* NOTE En este caso se esta haciendo referencia a los elementos que tengan la clase elemento1, elemento2 o elemento3 */ {
+    color: blue;
+}
+
+section :where(.elemento1, .elemento2, .elemento3) /* NOTE En este caso cuando se usa el where no se cambia la especificidad de los elementos */ {
+    color: rgb(0, 255, 60);
+}
+
+section:has(.elemento1) /* NOTE En este caso se esta haciendo referencia a los elementos que tengan la clase elemento1, realiza un cambio al section */ {
+    color: rgb(255, 0, 255);
+}

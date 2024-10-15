@@ -1,0 +1,71 @@
+:root {
+    --color-text: #080213;
+    --color-background: #e6eeff;
+    --color-box: #d1b3ff;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-background);
+}
+
+.card {
+    max-width: clamp(160px, 50%, 320px);
+    background-color: var(--color-box);
+    margin: 50px auto;
+    position: relative;
+}
+
+.card_back, .card_front {
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+}
+
+.card:hover .card_front {
+    transform: perspective(900px) rotateY(180deg);
+}
+
+.card:hover .card_back {
+    transform: perspective(900px) rotateY(360deg);
+}
+
+.card_front {
+    transform: perspective(900px) rotateY(0deg);
+}
+
+.card_back {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    padding: 12px;
+    transform: perspective(900px) rotateY(180deg);
+}
+
+.card_worker {
+    max-height: 200px;
+    overflow: hidden;
+    display: block;
+}
+
+.card_worker img {
+    max-width: 100%;
+}
+
+.card_data {
+    padding: 12px;
+}
+
+.card_data span {
+    font-size: 1.4rem;
+    margin: 12px 0;
+    display: block;
+}

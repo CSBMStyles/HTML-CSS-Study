@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Audios y Video</title>
+</head>
+<body>
+    <h1>Audio</h1>
+    <audio src="audio.mp3" controls></audio>
+    <h1>Video</h1>
+    <video src="video.mp4" controls autoplay muted>El navegador no soporta el vide0</video> <!-- NOTE La etiqueta video es para insertar videos, el atributo src es para la ruta del video, el atributo controls es para que aparezcan los controles de reproduccion, el atributo autoplay es para que el video se reproduzca automaticamente, el atributo loop es para que el video se repita, y el atributo muted es para que el video no tenga sonido -->
+    <h1>Video</h1>
+    <iframe width="300" height="160" src="https://www.youtube.com/embed/aZwuS2cPwJs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        <track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español" default> <!-- NOTE La etiqueta track es para insertar subtitulos, el atributo src es para la ruta del archivo de subtitulos, el atributo kind es para el tipo de subtitulos, el atributo srclang es para el idioma de los subtitulos, el atributo label es para el nombre de los subtitulos, y el atributo default es para que los subtitulos se muestren por defecto -->
+    </iframe>
+    <!-- NOTE: Use el código de inserción de YouTube para mostrar videos. -->
+</body>
+</html>

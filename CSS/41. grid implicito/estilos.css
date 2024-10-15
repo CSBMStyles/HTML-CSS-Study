@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    font-family: 'Outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grid {
+    display: grid;
+    height: 80vh;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    grid-auto-flow: column; /* NOTE La propiedad grid-auto-flow nos permite definir la dirección en la que se colocarán los elementos que no tienen un área definida */
+    grid-auto-rows: 100px; /* NOTE La propiedad grid-auto-rows nos permite definir un tamaño para las filas que no tienen un tamaño definido */
+    grid-auto-columns: auto; /* NOTE La propiedad grid-auto-columns nos permite definir un tamaño para las columnas que no tienen un tamaño definido */
+}
+
+.grid-item {
+    background-color: aqua;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+}

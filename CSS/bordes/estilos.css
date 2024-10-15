@@ -1,0 +1,22 @@
+.card {
+    background-color: blueviolet;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+
+    border-color: black;
+    border-style: solid; /* Sirve para darle un estilo al borde, existen solid, hiden, transparent */
+    border-width: 10px; /* Sirve para darle un ancho al borde */
+    border-radius: 50px 10px 20px 12px; 
+}
+
+#test {
+    background-color: blueviolet;
+    width: 400px;
+    margin: 100px;
+    text-align: center;
+
+    border: 3px solid black; /* Sirve para darle un borde a un elemento, el primer valor es el ancho, el segundo es el estilo y el tercero es el color */
+    border-radius: 50px; /* Sirve para darle una forma redondeada al borde la forma de redondeo es diferente entre porcentaje y pixeles */
+    border-top-left-radius: 5px; /* Sirve para darle un radio a una esquina en especifico */
+}

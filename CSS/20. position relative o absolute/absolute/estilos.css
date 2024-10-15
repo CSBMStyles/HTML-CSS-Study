@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f1f1;
+}
+
+.contenedor {
+    border: 2px solid #000;
+    margin: 20px;
+    text-align: center;
+    position: relative; /* NOTE El uso del relative es para que el elemento hijo se posicione con respecto a este contenedor */
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    color: white;
+}
+
+.box--blue {
+    background-color: blue;
+    position: absolute; /* NOTE El uso del absolute es para que no mantenga el lugar el elemento cuando se tiene un elemento que le sigue */
+    /* NOTE El absolute toma de punto de referencia el contenedor total de la pagina,pero si quieres que tome de referencia el contenedor padre, se le debe poner el position relative al contenedor padre */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    /* NOTE Para centrar un elemento en la pantalla se puede usar la propiedad top, left, right, bottom en valor 0 y margin auto */
+}
+
+.box--orange {
+    background-color: orange;
+}

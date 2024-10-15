@@ -1,0 +1,21 @@
+.list {
+    border: 1px solid #ccc;
+}
+
+.list--vieja {
+    opacity: 0.5; /* Este es un estilo para que la lista se vea opaca */
+}
+
+.list__item {
+    color: gray;
+    margin: 10px 0;
+    list-style: square; /* Este es un estilo para que los puntos de la lista sean cuadrados */
+}
+
+.item--important {
+    color: blue;
+}
+
+.item--danger {
+    color: red;
+}

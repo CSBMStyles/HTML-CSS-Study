@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f1f1;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    color: white;
+    position: relative; /* NOTE El valorrelative hace que el elemento se posicione con respecto a su posicion original */
+    /* NOTE El valor position siempre en static, pero si se le asigna otro valor como relative, absolute, fixed o sticky, entonces se puede mover el elemento con las propiedades top, right, bottom y left */
+    z-index: 1;
+}
+
+.box--blue {
+    background-color: blue;
+    /* NOTE A causa del valor relative podemos al elemento moverlo tomando de referencia el elemento que se marco como relative */
+    top: -10px;
+    left: 10px;
+    /* NOTE En caso de que se ubique un nuevo elemento ese elemento dejara un espacio vacio en el lugar donde se encontraba el elemento */
+    z-index: 2;
+}

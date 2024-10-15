@@ -1,0 +1,26 @@
+body {
+    background-color: blueviolet;
+    margin: 0;
+}
+
+.box {
+    background-color: #8a2befff;
+    width: 500px;
+    height: 200px;
+    margin: 20px;
+    background-image: url("https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png");
+    background-size: 100%; /* contain obliga a la imagen a ajustarse al tamaño de la caja
+
+    cover obliga a la imagen a ajustarse a la resolucion para no repetirse */
+    background-position: top; /* Sirve para acomodar la posicion e la imaten */
+    background-attachment: fixed; /* Sirve para que la imagen se quede fija en la pantalla */
+    background-repeat: no-repeat; /* Sirve para que la imagen no se repita */
+}
+
+.box-zip {
+    background-color: #8a2befff;
+    width: 500px;
+    height: 200px;
+    margin: 20px;
+    background: url("https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"), top / cover no-repeat;
+}
